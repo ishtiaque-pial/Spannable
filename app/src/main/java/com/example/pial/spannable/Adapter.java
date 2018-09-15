@@ -67,7 +67,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.AdapterHolder> {
 
 
         SpannableString ss = new SpannableString(modelArrayList.get(position).getName() +" reviewed "+modelArrayList.get(position).getRestaurent());
-        ClickableSpan firstwordClick = new ClickableSpan() {
+        MyClickableSpan firstwordClick = new MyClickableSpan() {
             @Override
             public void onClick(View widget) {
                 Log.d("main", "link clicked");
@@ -75,7 +75,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.AdapterHolder> {
                 Toast.makeText(context, "link 1 clicked", Toast.LENGTH_SHORT).show();
             }
         };
-        ClickableSpan secondwordClick = new ClickableSpan() {
+        MyClickableSpan secondwordClick = new MyClickableSpan() {
             @Override
             public void onClick(View widget) {
                 Log.d("main", "link clicked");
